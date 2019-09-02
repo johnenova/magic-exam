@@ -6,7 +6,6 @@
         <b-navbar-brand to="/">Magic Coding Interview</b-navbar-brand>
         <b-collapse is-nav id="nav-collapse">
           <b-navbar-nav>
-            <!--<b-nav-item href="#/exercise">Exercises</b-nav-item>-->
             <b-nav-item href="#/first">First Level</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
