@@ -1,33 +1,15 @@
 <template>  
     <div class="container">
-        <el-col :span="12" style="padding: 20px;">
-            <el-card class="box-card">
-                <div slot="header" class="clearfix">
-                    <span>First level</span>
-                </div>
-                <el-form :model="form" label-width="120px">
-                    <el-form-item
-                        label="Input 1">
-                        <el-input v-model="form.input1" placeholder="Input 1 (Array)"></el-input>
-                    </el-form-item>
-                    <el-form-item
-                        label="Input 2">
-                        <el-input v-model="form.input2" type="textarea" placeholder="Input 2 (Int)"></el-input>
-                    </el-form-item>
-                    <el-form-item>
-                        <el-button type="primary" @click="onSubmit()">Execute</el-button>
-                    </el-form-item>
-                </el-form>
-            </el-card>
-        </el-col>
-        <el-col :span="12" style="padding: 20px;">
+        <el-col :span="24" style="padding: 20px;">
             <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     <span>Result</span>
+                    <el-button style="float: right; padding: 3px 0" type="text" @click="onSubmit()">Execute</el-button>
                 </div>
+                
                 <div class="list-container">
-                    <div v-for="r in res" :key="r" class="text-item">
-                        {{ 'Number: ' + r }}
+                    <div v-for="(r, index) in res" :key="r" class="text-item">
+                        {{ 'Number ' + (index+1) + ': ' + r }}
                     </div>
                 </div>
             </el-card>

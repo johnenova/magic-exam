@@ -7,12 +7,13 @@
         <b-collapse is-nav id="nav-collapse">
           <b-navbar-nav>
             <b-nav-item href="#/first">First Level</b-nav-item>
+            <b-nav-item href="#/second">Second Level</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
+      <!--<img src="./assets/logo.png" alt="Vue.js PWA">-->
       <router-view></router-view>
     </main>
   </div>
