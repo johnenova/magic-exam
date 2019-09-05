@@ -4,7 +4,8 @@
             <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     <span>Second Level - Magic!</span>
-                    <el-button style="float: right; padding: 3px 0" type="text" @click="onSubmit()">Execute</el-button>
+                    <el-button style="float: right;" type="primary" @click="onSubmit()">Execute</el-button>
+                    <el-input v-model="input" placeholder="Input Here..." style=" float: right; width: 30%; margin-right: 15px;"></el-input>
                 </div>
                 <pre style="word-wrap: break-word; white-space: pre-wrap;">
                 {{ res }}
@@ -32,12 +33,13 @@
 export default {
     data() {
         return {
-            res: ''
+            res: '',
+            input: ''
         }
     },
     methods: {
         onSubmit: function() {
-            let max = 33;
+            let max = parseInt(this.input);
             let counter = 0;
 
             let result = '';
